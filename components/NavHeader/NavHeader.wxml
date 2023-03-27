@@ -1,0 +1,9 @@
+<view class="header clearfix">
+  <view class="header-left">
+    <text>{{nav}}</text>
+    <text class="iconfont icon-yousanjiao" style="font-weight: bold;"></text>
+  </view>
+  <view class="header-right">
+    <text class="iconfont icon-gengduo-shuxiang"></text>
+  </view>
+</view>

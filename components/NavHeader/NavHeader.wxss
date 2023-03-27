@@ -1,0 +1,18 @@
+.header {
+  padding-bottom: 20rpx;
+}
+
+.header .header-left {
+  float: left;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #e7e7e8;
+  font-weight: blod;
+}
+
+.header .header-right {
+  float: right;
+  font-size: 34rpx;
+  line-height: 80rpx;
+  color: #8c8c91;
+}
