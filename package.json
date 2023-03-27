@@ -1,0 +1,9 @@
+{
+  "name": "NetEaseMusic",
+  "packageManager": "yarn@3.4.1",
+  "dependencies": {
+    "@vant/weapp": "^1.10.14",
+    "crypto-js": "^4.1.1",
+    "js-base64": "^3.7.5"
+  }
+}

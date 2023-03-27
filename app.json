@@ -1,0 +1,44 @@
+{
+    "pages": [
+        "pages/recommendsong/recommendsong",
+        "pages/songdetail/songdetail",
+        "pages/index/index",
+        "pages/podcast/podcast",
+        "pages/recentlyplay/recentlyplay",
+        "pages/my/my",
+        "pages/login/login",
+        "pages/follow/follow",
+        "pages/community/community"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#1b1c21",
+        "navigationBarTitleText": "NetEaseMusic",
+        "navigationBarTextStyle": "white"
+    },
+    "sitemapLocation": "sitemap.json",
+    "usingComponents": {
+        "van-tabbar": "@vant/weapp/tabbar/index",
+        "van-tabbar-item": "@vant/weapp/tabbar-item/index"
+    },
+    "tabBar": {
+        "custom": true,
+        "list": [
+            {
+                "pagePath": "pages/index/index"
+            },
+            {
+                "pagePath": "pages/podcast/podcast"
+            },
+            {
+                "pagePath": "pages/my/my"
+            },
+            {
+                "pagePath": "pages/follow/follow"
+            },
+            {
+                "pagePath": "pages/community/community"
+            }
+        ]
+    },
+    "requiredBackgroundModes": ["audio", "location"]
+}
