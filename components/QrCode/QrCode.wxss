@@ -1,0 +1,46 @@
+.mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  position: fixed;
+  z-index: 5000;
+  box-sizing: border-box;
+  width: 490rpx;
+  height: 500rpx;
+  padding: 65rpx;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: rgba(165, 76, 59, .9);
+  text-align: center;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.container button {
+  position: absolute;
+  background-color: transparent;
+  bottom: 5rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25rpx;
+  color: #fff;
+}
+
+.container button::after {
+  border: none;
+}
+
+.container image {
+  width: 100%;
+  height: 100%;
+  /* mix-blend-mode: multiply */
+}

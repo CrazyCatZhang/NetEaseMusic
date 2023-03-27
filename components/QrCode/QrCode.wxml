@@ -1,0 +1,8 @@
+<view class="wx-qrcode-bg" hidden="{{!isShow}}">
+  <view class="mask">
+  </view>
+  <view class="container">
+    <image src="{{imgUrl}}" mode="" />
+    <button bindtap="generateQrCode">重新生成</button>
+  </view>
+</view>
