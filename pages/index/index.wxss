@@ -1,0 +1,224 @@
+/**index.wxss**/
+.indexContainer {
+  background: linear-gradient(to top, #1b1c23, #2a1b2c);
+}
+
+.indexContainer .indexHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.indexContainer .indexHeader image {
+  width: 36rpx;
+  height: 32rpx;
+  color: #f3f3f4;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 550rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+  padding: 0 20rpx;
+  border: 1px solid #4a2c47;
+  border-radius: 110rpx;
+  -webkit-border-radius: 110rpx;
+  -moz-border-radius: 110rpx;
+  -ms-border-radius: 110rpx;
+  -o-border-radius: 110rpx;
+}
+
+.search .search-icon {
+  margin-right: 10rpx;
+}
+
+.search input {
+  flex: 1;
+  color: #7b7a8e;
+  font-size: 25rpx;
+}
+
+.indexContainer .indexHeader .microphone {
+  width: 44rpx;
+  height: 44rpx;
+  color: #f3f3f4;
+}
+
+.banners {
+  width: 700rpx;
+  height: 300rpx;
+  margin: 0 auto;
+  margin-top: 40rpx;
+}
+
+.banners .wx-swiper-dot {
+  width: 10rpx;
+  /*点的长*/
+  height: 10rpx;
+  /*点的高*/
+  display: inline-flex;
+
+  margin-left: -10rpx;
+  /* 修改点之间的间距 ，我这里挨的近为负数，分开点数值加大*/
+  justify-content: space-between;
+}
+
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+  width: 90%;
+  text-align: left;
+}
+
+.banners image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  -ms-border-radius: 10rpx;
+  -o-border-radius: 10rpx;
+}
+
+.navContainer {
+  display: flex;
+}
+
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+
+.navItem .iconfont {
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #e94656;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.navItem text {
+  font-size: 26rpx;
+  color: #b5b5b9;
+}
+
+.recommendContainer,
+.topList,
+.podcast {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #272730;
+}
+
+.recommendScroll {
+  display: flex;
+  height: 300rpx;
+}
+
+.scrollItem {
+  width: 200rpx;
+  margin-right: 20rpx;
+  position: relative;
+}
+
+.scrollItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+  -webkit-border-radius: 10rpx;
+  -moz-border-radius: 10rpx;
+  -ms-border-radius: 10rpx;
+  -o-border-radius: 10rpx;
+}
+
+.scrollItem text {
+  font-size: 24rpx;
+  color: #e8e7e9;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.scrollItem .iconfont {
+  position: absolute;
+  font-size: 38rpx;
+  right: 8rpx;
+  top: 150rpx;
+  color: #fffeff;
+}
+
+.topList {
+  height: 610rpx;
+}
+
+.topListSwiper {
+  height: 485rpx;
+}
+
+.swiperItem {
+  width: 90%;
+  background-color: #26262d;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.swiperItem .title {
+  color: #e8e9ee;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  padding-left: 10rpx;
+  font-weight: bold;
+}
+
+.musicItem {
+  display: flex;
+}
+
+.musicItem image {
+  width: 100rpx;
+  height: 100rpx;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  padding-left: 10rpx;
+}
+
+.musicItem .count {
+  width: 100rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+  font-size: 40rpx;
+  font-weight: blod;
+}
+
+.musicItem .musicName {
+  height: 100rpx;
+  line-height: 100rpx;
+  max-width: 360rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 30rpx;
+  margin-left: -12rpx;
+  color: #e8eaed;
+}
+
+.musicItem:nth-child(2) .count {
+  color: #be9c50;
+}
+
+.musicItem:nth-child(3) .count {
+  color: #777d9b;
+}
+
+.musicItem:nth-child(4) .count {
+  color: #b78555;
+}
