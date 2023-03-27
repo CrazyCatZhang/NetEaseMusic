@@ -1,0 +1,137 @@
+<!--pages/my/my.wxml-->
+<view class="myContainer">
+  <view class="myHeader">
+    <text class="iconfont icon-cebianlan"></text>
+    <text class="iconfont icon-sousuo"></text>
+  </view>
+
+  <view class="userSection">
+    <view class="userInfo">
+      <image src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '../../static/bgImg.png'}}" mode="" />
+      <view wx:if="{{userInfo.userId}}" class="userProfile">
+        <text>{{userInfo.nickname}}</text>
+        <view class="details">
+          <view class="follows">关注 {{userDetails.profile.follows}}</view>
+          <view class="followeds">粉丝 {{userDetails.profile.followeds}}</view>
+          <view class="level">
+            LV.{{userDetails.level}}
+          </view>
+        </view>
+      </view>
+      <view wx:else class="login" bindtap="toLogin">
+        <text>立即登录</text>
+        <text class="iconfont icon-yousanjiao"></text>
+      </view>
+    </view>
+
+    <view class="musicAppclation">
+      <view class="top">
+        <view wx:if="{{userInfo.userId}}" class="apps">
+          <view class="play" bindtap="toRecentlyPlay">
+            <image src="../../static/application/play.png" mode="" />
+            <text>最近播放</text>
+          </view>
+          <view class="downloads">
+            <image src="../../static/application/download.png" mode="" />
+            <text>本地/下载 </text>
+          </view>
+          <view class="clouds">
+            <image src="../../static/application/clouds.png" mode="" />
+            <text>云盘</text>
+          </view>
+          <view class="purchase">
+            <image src="../../static/application/purchase.png" mode="" />
+            <text>已购</text>
+          </view>
+          <view class="friends">
+            <image src="../../static/application/friends.png" mode="" />
+            <text>我的好友</text>
+          </view>
+          <view class="collect">
+            <image src="../../static/application/collect.png" mode="" />
+            <text>收藏和赞</text>
+          </view>
+          <view class="podcast">
+            <image src="../../static/application/podcast.png" mode="" />
+            <text>我的播客</text>
+          </view>
+          <view class="heart">
+            <image src="../../static/application/heart.png" mode="" />
+            <text>乐迷团</text>
+          </view>
+        </view>
+      </view>
+      <view class="bottom">
+        <text class="iconfont icon-tianjia"></text>
+        <text>音乐应用</text>
+      </view>
+    </view>
+
+    <view class="myFavorite">
+      <view class="left">
+        <view class="album" style="background: url({{favoriteList.coverImgUrl}});background-size: 100%;">
+        </view>
+        <view class="info">
+          <view class="title">我喜欢的音乐</view>
+          <view class="count">{{favoriteList.trackCount? favoriteList.trackCount : '0'}}首</view>
+        </view>
+      </view>
+      <view class="right">
+        <image src="../../static/heartbeat.png" mode="" />
+        <text>心动模式</text>
+      </view>
+    </view>
+
+    <view class="songList">
+      <view class="navigator">
+        <a href="#create">创建歌单</a>
+        <text> | </text>
+        <a href="#collection">收藏歌单</a>
+      </view>
+      <view id="create" class="create">
+        <view class="header">
+          <text class="left">创建歌单</text>
+          <view class="right">
+            <text class="iconfont icon-tianjia"></text>
+            <text class="iconfont icon-gengduo-shuxiang"></text>
+          </view>
+        </view>
+        <view class="content">
+          <view wx:if="{{createList.length > 0}}" wx:for="{{createList}}" wx:key="id" class="detail">
+            <view class="album" style="background: url({{item.coverImgUrl}});background-size: 100%;"></view>
+            <view class="info">
+              <view class="title">{{item.name}}</view>
+              <view class="count">{{item.trackCount? item.trackCount : '0'}}首</view>
+            </view>
+          </view>
+          <view class="bottom">
+            <view class="import">
+              <text class="iconfont icon-daoru"></text>
+            </view>
+            <text>一键导入外部音乐</text>
+          </view>
+        </view>
+      </view>
+      <view id="collection" class="collection">
+        <view class="header">
+          <text class="left">收藏歌单</text>
+          <view class="right">
+            <text class="iconfont icon-gengduo-shuxiang"></text>
+          </view>
+        </view>
+        <view class="content">
+          <view wx:if="{{collectList.length > 0}}" wx:for="{{collectList}}" wx:key="id" class="detail">
+            <view class="album" style="background: url({{item.coverImgUrl}});background-size: 100%;"></view>
+            <view class="info">
+              <view class="title">{{item.name}}</view>
+              <view class="count">{{item.trackCount? item.trackCount : '0'}}首</view>
+            </view>
+          </view>
+          <view wx:if="{{collectList.length === 0}}" class="noList">
+            <text>暂无收藏歌单</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
