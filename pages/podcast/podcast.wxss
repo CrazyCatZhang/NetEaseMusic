@@ -1,0 +1,92 @@
+.myWindow {
+    height: 175rpx;
+    background-color: #1b1c21 !important;
+}
+
+.van-tabs__scroll {
+    background-color: #1b1b23 !important;
+}
+
+.van-tab {
+    line-height: var(--tabs-line-height, 33px) !important;
+}
+
+.videoScroll {
+    margin-top: 10rpx;
+    /* 动态计算css宽高 1vh表示1%的高度 */
+    height: calc(100vh - 240rpx);
+}
+
+.videoItem {
+    padding: 0 3%;
+}
+
+.videoItem video {
+    width: 100%;
+    height: 360rpx;
+    border-radius: 10rpx;
+}
+
+.videoItem .common {
+    width: 100%;
+    height: 360rpx;
+    border-radius: 10rpx;
+}
+
+.videoItem .content {
+    font-size: 26rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    max-width: 500rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fefefe;
+    padding: 0 20rpx;
+}
+
+/* footer */
+.footer {
+    padding: 0 20rpx;
+    color: #fefefe;
+}
+
+.footer .avatar {
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.footer .nickName {
+    font-size: 26rpx;
+    vertical-align: middle;
+    margin-left: 20rpx;
+}
+
+.footer .comments_praised {
+    float: right;
+}
+
+.comments_praised .btn {
+    display: inline;
+    padding: 0;
+    background-color: transparent;
+    border-color: transparent;
+    color: #fefefe;
+}
+
+.comments_praised .btn:after {
+    border: none;
+}
+
+.comments_praised .item {
+    margin-left: 50rpx;
+    position: relative;
+}
+
+.comments_praised .item .count {
+    position: absolute;
+    top: -20rpx;
+    font-size: 20rpx;
+}
