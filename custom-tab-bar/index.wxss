@@ -1,0 +1,12 @@
+.van-tabbar--safe {
+  padding-top: 16rpx;
+  padding-bottom: 35rpx !important;
+}
+
+.van-tabbar {
+  background: linear-gradient(to bottom, #1e1d24, #2d2c30);
+}
+
+.van-tabbar image {
+  padding: 6rpx;
+}
