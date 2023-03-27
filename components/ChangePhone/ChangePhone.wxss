@@ -1,0 +1,95 @@
+.wx-mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #151515;
+}
+
+.change-phone-view {
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 5000;
+  width: 100%;
+  height: 340rpx;
+  padding: 20rpx;
+  top: 23%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
+.change-phone-view .title {
+  color: #fdfdfd;
+  font-size: 40rpx;
+}
+
+.change-phone-view .remind {
+  display: block;
+  color: #626262;
+  font-size: 28rpx;
+  margin: 10rpx 0;
+}
+
+.change-phone-view .inputItem {
+  margin-bottom: 100rpx;
+}
+
+.change-phone-view input {
+  width: 670rpx;
+  color: #fdfdfd;
+  border-bottom: 1px solid #2c2c2c;
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+
+.change-phone-view button {
+  width: 620rpx;
+  border-radius: 50rpx;
+  color: #846361;
+}
+
+.change-phone-view .next {
+  background: linear-gradient(to right, #d6705a, #d84c37);
+  color: #e9feff;
+}
+
+.change-phone-view .nextDisabled {
+  background-color: #4d1e1b !important;
+}
+
+.find {
+  text-align: center;
+  margin-top: 40rpx;
+  color: #617ba4;
+  font-size: 26rpx;
+}
+
+.change-phone-view .inputItem .captcha {
+  position: relative;
+}
+
+.change-phone-view .inputItem .captcha button {
+  z-index: 1000;
+  position: absolute;
+  width: 220rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-radius: 15rpx;
+  font-size: 28rpx;
+  right: 0;
+  top: 15rpx;
+}
+
+.change-phone-view .inputItem .captcha .codeBtn1 {
+  color: #fdf1f0;
+  background: linear-gradient(to right, #d6705a, #d84c37);
+}
+
+.change-phone-view .inputItem .captcha .codeBtn2 {
+  color: #846361;
+  background-color: #4d1e1b !important;
+}
