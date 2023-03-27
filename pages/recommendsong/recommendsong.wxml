@@ -1,0 +1,41 @@
+<view class="contaniner">
+    <view class="header">
+        <view class="bg">
+            <image src="/static/sky.jpeg"></image>
+        </view>
+        <view class="navbar">
+            <text class="iconfont icon-zuosanjiao" bindtap="navigateBack"></text>
+            <text class="title">每日推荐</text>
+        </view>
+        <view class="date">
+            <text class="day">{{ day }}</text>
+            <text class="month">/ {{ month }}</text>
+        </view>
+    </view>
+    <view class="listContent">
+        <view class="listHeader">
+            <view class="left">
+                <image src="../../static/application/play.png" mode="" />
+                <text>播放全部</text>
+            </view>
+            <view class="right"></view>
+        </view>
+        <view wx:for="{{ recommendSontList }}" wx:key="id" class="detail" data-song="{{item}}" bindtap="toSongDetail">
+            <view class="left">
+                <image src="{{item.al.picUrl}}"></image>
+                <view>
+                    <view class="name">
+                        <text class="mainname">{{ item.name }}</text>
+                    </view>
+                    <view wx:if="{{ item.singer }}" class="songInfo">
+                        {{ item.singer }}
+                    </view>
+                </view>
+            </view>
+            <view class="right">
+                <text class="iconfont icon-caozuo-bofang"></text>
+                <text class="iconfont icon-gengduo-shuxiang"></text>
+            </view>
+        </view>
+    </view>
+</view>

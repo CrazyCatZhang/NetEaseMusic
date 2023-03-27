@@ -1,0 +1,149 @@
+page {
+    padding-bottom: 0;
+}
+
+.container .header {
+    width: 100%;
+    height: 300rpx;
+}
+
+.contaniner .header {
+    position: relative;
+}
+
+.contaniner .header .bg {
+    width: 160%;
+    height: 240px;
+    margin-left: -30%;
+    border-radius: 0 0 50% 50%/15%;
+    overflow: hidden;
+    -webkit-border-radius: 0 0 50% 50%/15%;
+    -moz-border-radius: 0 0 50% 50%/15%;
+    -ms-border-radius: 0 0 50% 50%/15%;
+    -o-border-radius: 0 0 50% 50%/15%;
+}
+
+.contaniner .header image {
+    width: 100%;
+}
+
+.navbar {
+    width: 55%;
+    position: absolute;
+    top: 105rpx;
+    left: 0;
+    padding-left: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .iconfont {
+    color: #fefefe;
+    font-size: 55rpx;
+}
+
+.navbar .title {
+    color: #333232;
+}
+
+.date {
+    position: absolute;
+    left: 30rpx;
+    bottom: 40rpx;
+}
+
+.date .day {
+    color: #fffefe;
+    font-size: 80rpx;
+    font-weight: bold;
+}
+
+.date .month {
+    color: #fffeff;
+}
+
+.listContent {
+    padding: 20rpx;
+}
+
+.listHeader .left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.listHeader .left image {
+    width: 50rpx;
+    height: 50rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
+}
+
+.listHeader .left text {
+    font-size: 35rpx;
+    color: #fff;
+}
+
+.listContent .detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
+}
+
+.listContent .detail .left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.listContent .detail .left image {
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 20rpx;
+    margin-right: 20rpx;
+    -webkit-border-radius: 20rpx;
+    -moz-border-radius: 20rpx;
+    -ms-border-radius: 20rpx;
+    -o-border-radius: 20rpx;
+}
+
+.listContent .detail .left .mainname {
+    display: inline-block;
+    width: 400rpx;
+    color: #fefefe;
+    margin-right: 5rpx;
+    font-size: 30rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.listContent .detail .left .alia {
+    color: #b0b0b0;
+}
+
+.listContent .detail .left .songInfo {
+    width: 400rpx;
+    color: #b0b0b0;
+    font-size: 25rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.listContent .detail .right {
+    color: #878787;
+}
+
+.listContent .detail .right text {
+    font-size: 52rpx;
+}
+
+.listContent .detail .right .icon-bofang {
+    margin-right: 20rpx;
+}
