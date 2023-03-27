@@ -1,0 +1,165 @@
+page {
+    background-image: linear-gradient(#070808, #343535, #292a29, #2e2e2f, #5b5c5a, #797771);
+}
+
+.songDetailContainer {
+    position: relative;
+    height: 100vh;
+}
+
+.myWindow {
+    position: relative;
+    height: 175rpx;
+    margin-bottom: 40rpx;
+}
+
+.navbar {
+    width: 72%;
+    position: absolute;
+    top: 105rpx;
+    left: 0;
+    padding-left: 20rpx;
+}
+
+.navbar .iconfont {
+    color: #fefefe;
+    font-size: 55rpx;
+}
+
+.navbar .title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: #fffeff;
+    text-align: center;
+    -webkit-transform: translateX(-25%);
+    -moz-transform: translateX(-25%);
+    -ms-transform: translateX(-25%);
+    -o-transform: translateX(-25%);
+}
+
+.title .name {
+    width: 300rpx;
+    font-size: 30rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.title .singer {
+    width: 300rpx;
+    font-size: 25rpx;
+    color: #b7b7b6;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.circle {
+    position: absolute;
+    top: 216rpx;
+    left: 50%;
+    transform: translateX(-49%);
+    width: 60rpx;
+    height: 60rpx;
+    border-radius: 50%;
+    border: 1px solid #393f49;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateX(-49%);
+    -moz-transform: translateX(-49%);
+    -ms-transform: translateX(-49%);
+    -o-transform: translateX(-49%);
+}
+
+.needle {
+    position: absolute;
+    left: 50%;
+    margin-left: -104rpx;
+    width: 416rpx;
+    height: 416rpx;
+    z-index: 1000;
+    transform-origin: 107rpx 36rpx;
+    transform: rotate(-20deg);
+    transition: transform 1s;
+    -webkit-transition: transform 1s;
+    -moz-transition: transform 1s;
+    -ms-transition: transform 1s;
+    -o-transition: transform 1s;
+}
+
+.needleRoate {
+    transform: rotate(0deg);
+}
+
+.discContainer {
+    position: relative;
+    top: 245rpx;
+    text-align: center;
+}
+
+.discAnimation {
+    animation: disc 20s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes disc {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.disc {
+    width: 636rpx;
+    height: 636rpx;
+}
+
+.musicImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 400rpx;
+    height: 400rpx;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.musicControl {
+    position: absolute;
+    width: 100%;
+    bottom: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.musicControl text {
+    width: 25%;
+    height: 120rpx;
+    line-height: 120rpx;
+    text-align: center;
+    color: #fefefe;
+    font-size: 50rpx;
+}
+
+.musicControl .icon-bofang1,
+.musicControl .icon-zanting {
+    font-size: 80rpx;
+}
