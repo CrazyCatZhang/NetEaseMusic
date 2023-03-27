@@ -1,0 +1,110 @@
+.loginWindow {
+  height: 175rpx;
+  background-color: #c13b2c;
+}
+
+page {
+  height: 2000rpx;
+  background-color: #c13b2c;
+}
+
+.logo {
+  width: 164rpx;
+  height: 164rpx;
+  background-color: #e04835;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 300rpx;
+}
+
+.logo text {
+  line-height: 164rpx;
+  color: #ffffff;
+  font-size: 140rpx;
+}
+
+.login {
+  margin-top: 300rpx;
+  text-align: center;
+  overflow: hidden;
+}
+
+.login .getPhoneNumber {
+  width: 600rpx;
+  height: 96rpx;
+  border-radius: 50rpx;
+  color: #EB4D44;
+  font-weight: bold;
+  margin-top: 108rpx;
+}
+
+.login .visitors {
+  margin-top: 20rpx;
+  width: 600rpx;
+  height: 96rpx;
+  border-radius: 50rpx;
+  color: #FFFFFF;
+  font-weight: bold;
+  background-color: #c13b2c;
+  border: 1px solid #fff;
+}
+
+.login .loginInfo {
+  text-align: center;
+}
+
+.login .loginInfo .phoneNumber {
+  font-size: 40rpx;
+  color: #fff;
+  margin-right: 15rpx;
+}
+
+.loginInfo .icon-biji {
+  color: #e6b1ab;
+  font-size: 40rpx;
+}
+
+.loginInfo .sign {
+  font-size: 20rpx;
+  color: #e09d95;
+}
+
+.loginInfo button {
+  margin-top: 25rpx;
+  width: 600rpx;
+  height: 96rpx;
+  border-radius: 50rpx;
+  color: #EB4D44;
+  font-weight: bold;
+}
+
+.login .protocol {
+  display: inline-block;
+  width: 600rpx;
+  color: #edc5c0;
+  margin-top: 40rpx;
+  font-size: 25rpx;
+}
+
+.login .others {
+  display: flex;
+  width: 620rpx;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 120rpx;
+  margin-left: 75rpx;
+}
+
+.login .others view {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  line-height: 72rpx;
+}
+
+.login .others view text {
+  font-size: 40rpx;
+}
