@@ -10,21 +10,29 @@ Page({
      */
     data: {
         isPlay: false,
-        song: {}
+        song: {},
+        musicLink: ''
     },
 
     handleMusicPlay() {
         const isPlay = !this.data.isPlay
-        this.musicControl(isPlay, this.data.song.id)
+        this.musicControl(isPlay, this.data.song.id, this.data.musicLink)
     },
 
-    musicControl(isPlay, musicId) {
+    musicControl(isPlay, musicId, musicLink) {
         if (isPlay) {
-            getSongUrl({ id: musicId }).then(result => {
-                const musicUrl = result.data[0].url
-                this.backgroundAudioManager.src = musicUrl
-                this.backgroundAudioManager.title = this.data.song.name
-            })
+            if (!musicLink) {
+                getSongUrl({ id: musicId }).then(result => {
+                    musicLink = result.data[0].url
+                    this.setData({
+                        musicLink
+                    })
+                    this.backgroundAudioManager.src = musicLink
+                })
+            } else {
+                this.backgroundAudioManager.src = musicLink
+            }
+            this.backgroundAudioManager.title = this.data.song.name
         } else {
             this.backgroundAudioManager.pause()
         }
