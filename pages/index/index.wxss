@@ -1,4 +1,9 @@
 /**index.wxss**/
+.window {
+    height: 175rpx;
+    background: linear-gradient(to bottom right, #1a1a34, #2a1a2b);
+}
+
 .indexContainer {
     background: linear-gradient(to top, #1b1c23, #2a1b2c);
 }

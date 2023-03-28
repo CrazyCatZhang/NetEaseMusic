@@ -9,6 +9,8 @@ import {
 
 import { shiftTimeStamp } from '../../utils/base'
 
+import PubSub from 'pubsub-js'
+
 Page({
     /**
      * Page initial data
@@ -19,7 +21,18 @@ Page({
         video: [],
         playlist: [],
         album: [],
-        podcast: []
+        podcast: [],
+        index: 0
+    },
+
+    toSongDetail(event) {
+        const { song, index } = event.currentTarget.dataset
+        this.setData({
+            index
+        })
+        wx.navigateTo({
+            url: '/pages/songdetail/songdetail?musicId=' + song.resourceId
+        })
     },
 
     /**
@@ -64,6 +77,23 @@ Page({
             this.setData({
                 podcast: result.data.list
             })
+        })
+
+        PubSub.subscribe('switchType', (_, type) => {
+            let { songs, index } = this.data
+            if (type === 'prev') {
+                index === 0 && (index = songs.length)
+                index -= 1
+            } else {
+                index === songs.length - 1 && (index = -1)
+                index += 1
+            }
+
+            this.setData({
+                index
+            })
+            const musicId = songs[index].resourceId
+            PubSub.publish('musicId', musicId)
         })
     },
 

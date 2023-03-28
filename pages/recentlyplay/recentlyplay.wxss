@@ -1,8 +1,3 @@
-.container .myWindow {
-    height: 175rpx;
-    background-color: #1b1c21 !important;
-}
-
 .container .header {
     text-align: center;
     font-size: 38rpx;

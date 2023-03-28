@@ -1,9 +1,4 @@
 /**app.wxss**/
-.window {
-    height: 175rpx;
-    background: linear-gradient(to bottom right, #1a1a34, #2a1a2b);
-}
-
 @import '/static/iconfont/iconfont.wxss';
 
 page {

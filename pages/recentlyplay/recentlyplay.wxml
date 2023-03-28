@@ -7,7 +7,7 @@
           <text>播放全部</text>
           <text class="count">({{songs.length}})</text>
         </view>
-        <view wx:for="{{songs}}" wx:key="resourceId" class="detail">
+        <view wx:for="{{songs}}" wx:key="resourceId" class="detail" data-song="{{item}}" data-index="{{index}}" bindtap="toSongDetail">
           <view class="left">
             <view class="name">
               <text class="mainname">{{item.data.name}}</text>

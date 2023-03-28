@@ -162,7 +162,10 @@ Page({
             PubSub.publish('switchType', 'next')
             this.setData({
                 percentage: 0,
-                currentTime: '00:00'
+                currentTime: '00:00',
+                startPoint: {},
+                currentSeconds: 0,
+                slotLeft: 0
             })
         })
     },
