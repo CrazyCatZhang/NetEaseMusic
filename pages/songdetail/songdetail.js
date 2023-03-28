@@ -100,11 +100,25 @@ Page({
             this.changePlayState(false)
         })
         this.backgroundAudioManager.onTimeUpdate(() => {
-            let currentTime = moment(this.backgroundAudioManager.currentTime * 1000).format('mm:ss')
-            let percentage = this.backgroundAudioManager.currentTime / parseInt(this.data.durationTime)
+            if (appInstance.globalData.isMusicPlay && appInstance.globalData.musicId === +musicId) {
+                let currentTime = moment(this.backgroundAudioManager.currentTime * 1000).format('mm:ss')
+                let percentage = (this.backgroundAudioManager.currentTime / this.backgroundAudioManager.duration) * 100
+                this.setData({
+                    currentTime,
+                    percentage
+                })
+            }
+        })
+        this.backgroundAudioManager.onEnded(() => {
+            PubSub.subscribe('musicId', (_, musicId) => {
+                this.getMusicInfo(musicId)
+                this.musicControl(true, musicId)
+                PubSub.unsubscribe('musicId')
+            })
+            PubSub.publish('switchType', 'next')
             this.setData({
-                currentTime,
-                percentage
+                percentage: 0,
+                currentTime: '00:00'
             })
         })
     },
