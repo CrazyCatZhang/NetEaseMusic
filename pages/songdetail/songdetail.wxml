@@ -15,6 +15,12 @@
         <image class="musicImg" src="{{ song.al.picUrl }}"></image>
     </view>
 
+    <view class="progressControl">
+        <text>00:00</text>
+        <van-progress percentage="60" stroke-width="2" show-pivot="{{false}}"  color="#b7b5b5" track-color="#7f7d7a"/>
+        <text>{{durationTime}}</text>
+    </view>
+
     <view class="musicControl">
         <text class="iconfont icon-24gl-shuffle"></text>
         <text class="iconfont icon-shangyishou" id="prev" bindtap="handleSwitch"></text>

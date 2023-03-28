@@ -1,6 +1,7 @@
 // pages/songdetail/songdetail.js
 import { getSongDetail, getSongUrl } from '../../services/song'
 import PubSub from 'pubsub-js'
+import moment from 'moment'
 
 const appInstance = getApp()
 
@@ -11,7 +12,9 @@ Page({
     data: {
         isPlay: false,
         song: {},
-        musicLink: ''
+        musicLink: '',
+        currentTime: '',
+        durationTime: ''
     },
 
     handleMusicPlay() {
@@ -61,8 +64,10 @@ Page({
                 }
                 item.singer = item.singer.substr(10)
             })
+            let durationTime = moment(result.songs[0].dt).format('mm:ss')
             this.setData({
-                song: result.songs[0]
+                song: result.songs[0],
+                durationTime
             })
         })
     },

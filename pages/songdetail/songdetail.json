@@ -1,4 +1,6 @@
 {
-    "usingComponents": {},
+    "usingComponents": {
+        "van-progress": "@vant/weapp/progress/index"
+    },
     "navigationStyle": "custom"
 }

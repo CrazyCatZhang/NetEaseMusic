@@ -163,3 +163,24 @@ page {
 .musicControl .icon-zanting {
     font-size: 80rpx;
 }
+
+.progressControl {
+    box-sizing: border-box;
+    width: 100%;
+    position: absolute;
+    bottom: 200rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40rpx;
+}
+
+.progressControl text {
+    color: #aba7a7;
+    font-size: 25rpx;
+}
+
+.van-progress {
+    width: 480rpx;
+}

@@ -19,6 +19,8 @@ __metadata:
     "@vant/weapp": ^1.10.14
     crypto-js: ^4.1.1
     js-base64: ^3.7.5
+    lin-ui: ^0.9.13
+    moment: ^2.29.4
     pubsub-js: ^1.9.4
   languageName: unknown
   linkType: soft
@@ -34,6 +36,20 @@ __metadata:
   version: 3.7.5
   resolution: "js-base64@npm:3.7.5"
   checksum: 67a78c8b1c47b73f1c6fba1957e9fe6fd9dc78ac93ac46cc2e43472dcb9cf150d126fb0e593192e88e0497354fa634d17d255add7cc6ee3c7b4d29870faa8e18
+  languageName: node
+  linkType: hard
+
+"lin-ui@npm:^0.9.13":
+  version: 0.9.13
+  resolution: "lin-ui@npm:0.9.13"
+  checksum: 42ec16d700747b10bb763da6db7e1ecf901ae8678888255b172d60b657de88b48d306a6bd859ece939f6598f842755db447d7051c3399f4b24846c3c2189d19a
+  languageName: node
+  linkType: hard
+
+"moment@npm:^2.29.4":
+  version: 2.29.4
+  resolution: "moment@npm:2.29.4"
+  checksum: 0ec3f9c2bcba38dc2451b1daed5daded747f17610b92427bebe1d08d48d8b7bdd8d9197500b072d14e326dd0ccf3e326b9e3d07c5895d3d49e39b6803b76e80e
   languageName: node
   linkType: hard
 
