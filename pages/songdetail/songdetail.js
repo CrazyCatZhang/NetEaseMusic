@@ -18,8 +18,6 @@ Page({
         currentTime: '00:00',
         durationTime: '',
         percentage: 0,
-        slotLeft: 0,
-        startPoint: {},
         currentSeconds: 0
     },
 
@@ -80,21 +78,10 @@ Page({
     },
 
     slotMove(e) {
-        let endPoint = e.touches[e.touches.length - 1]
-        let translateX = endPoint.clientX - this.data.startPoint.clientX
-        let slotLeft = this.data.slotLeft + translateX
-        if (slotLeft > max) {
-            slotLeft = max
-        }
-        if (slotLeft < 0) {
-            slotLeft = 0
-        }
-        const currentSeconds = ((this.data.percentage / 100) * this.data.song.dt) / 1000
+        const currentSeconds = ((e.detail.value / 100) * this.data.song.dt) / 1000
         const currentTime = moment(currentSeconds * 1000).format('mm:ss')
         this.setData({
-            startPoint: endPoint,
-            slotLeft,
-            percentage: parseInt((slotLeft / max) * 100),
+            percentage: e.detail.value,
             currentTime,
             currentSeconds
         })
@@ -102,17 +89,14 @@ Page({
 
     slotStart(e) {
         this.backgroundAudioManager.pause()
-        this.setData({
-            startPoint: e.touches[0]
-        })
     },
 
     slotEnd() {
+        const { song, musicLink, currentSeconds } = this.data
         this.backgroundAudioManager.seek(this.data.currentSeconds)
-        const { song, musicLink } = this.data
+        this.backgroundAudioManager.startTime = currentSeconds
         if (!musicLink) {
             this.musicControl(true, song.id, musicLink)
-            this.backgroundAudioManager.startTime = this.data.currentSeconds
         } else {
             this.backgroundAudioManager.play()
         }
@@ -163,9 +147,7 @@ Page({
             this.setData({
                 percentage: 0,
                 currentTime: '00:00',
-                startPoint: {},
-                currentSeconds: 0,
-                slotLeft: 0
+                currentSeconds: 0
             })
         })
     },

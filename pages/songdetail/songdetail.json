@@ -1,6 +1,7 @@
 {
     "usingComponents": {
-        "l-progress": "lin-ui/progress/index"
+        "l-progress": "lin-ui/progress/index",
+        "van-slider": "@vant/weapp/slider/index"
     },
     "navigationStyle": "custom"
 }

@@ -198,3 +198,14 @@ l-progress .slot {
     background-color: #fefeff;
     display: block;
 }
+
+van-slider {
+    width: 500rpx;
+}
+
+.custom-button {
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    background-color: #fefeff;
+}

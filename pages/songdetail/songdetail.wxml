@@ -17,7 +17,7 @@
 
     <view class="progressControl">
         <text>{{ currentTime }}</text>
-        <l-progress
+        <!-- <l-progress
             percent="{{ percentage }}"
             l-slot-class="slot-class"
             stroke-width="4"
@@ -32,7 +32,10 @@
                 bindtouchend="slotEnd"
                 style="left: {{ 2 * slotLeft }}rpx;"
             ></view>
-        </l-progress>
+        </l-progress> -->
+        <van-slider value="{{ percentage }}" use-button-slot bind:drag="slotMove" bind:drag-start="slotStart" bind:drag-end="slotEnd" active-color="#b9b8b7" inactive-color="#999595">
+            <view class="custom-button" slot="button"></view>
+        </van-slider>
         <text>{{ durationTime }}</text>
     </view>
 
