@@ -16,7 +16,7 @@
     </view>
 
     <view class="progressControl">
-        <text>00:00</text>
+        <text>{{currentTime}}</text>
         <van-progress percentage="60" stroke-width="2" show-pivot="{{false}}"  color="#b7b5b5" track-color="#7f7d7a"/>
         <text>{{durationTime}}</text>
     </view>

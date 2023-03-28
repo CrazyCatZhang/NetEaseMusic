@@ -13,7 +13,7 @@ Page({
         isPlay: false,
         song: {},
         musicLink: '',
-        currentTime: '',
+        currentTime: '00:00',
         durationTime: ''
     },
 
@@ -95,6 +95,12 @@ Page({
         })
         this.backgroundAudioManager.onStop(() => {
             this.changePlayState(false)
+        })
+        this.backgroundAudioManager.onTimeUpdate(() => {
+            let currentTime = moment(this.backgroundAudioManager.currentTime * 1000).format('mm:ss')
+            this.setData({
+                currentTime
+            })
         })
     },
 
