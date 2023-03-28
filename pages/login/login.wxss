@@ -3,6 +3,33 @@ page {
     background-color: #c13b2c;
 }
 
+.myWindow {
+    position: relative;
+    height: 175rpx;
+}
+
+.navbar {
+    width: 50%;
+    position: absolute;
+    top: 105rpx;
+    left: 0;
+    padding-left: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .iconfont {
+    color: #fefefe;
+    font-size: 55rpx;
+}
+
+.navbar .title {
+    color: #fffeff;
+    text-align: center;
+}
+
 .logo {
     width: 164rpx;
     height: 164rpx;

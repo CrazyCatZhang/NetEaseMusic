@@ -1,38 +1,51 @@
 <view class="loginContainer">
-  <view class="logo">
-    <text class="iconfont icon-neteasemusic"></text>
-  </view>
-  <view class="login">
-    <button class="getPhoneNumber" wx:if="{{phoneNumber == ''}}" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取本地手机号</button>
-    <view wx:else class="loginInfo">
-      <text class="phoneNumber">{{serectNumber}}</text>
-      <text class="iconfont icon-biji" bindtap="changePhone"></text>
-      <view class="sign">中国移动提供认证服务</view>
-      <button bindtap="login">手机号登录</button>
+    <view class="myWindow">
+        <view class="navbar">
+            <text class="iconfont icon-zuosanjiao" bindtap="navigateBack"></text>
+            <view class="title">登录</view>
+        </view>
     </view>
-    <button class="visitors">访客登录</button>
-    <text class="protocol">登录即已同意《服务条款》《隐私政策》《儿童隐私政策》《中国移动认证服务协议》</text>
-    <view class="others" bindtap="loginWithQrCode">
-      <view class="wechat">
-        <text class="iconfont icon-weixin"></text>
-      </view>
-      <view class="qq">
-        <text class="iconfont icon-shejiaotubiao-03"></text>
-      </view>
-      <view class="weibo">
-        <text class="iconfont icon-shejiaotubiao-06"></text>
-      </view>
-      <view class="apple">
-        <text class="iconfont icon-apple-fill"></text>
-      </view>
-      <view class="netease">
-        <text class="iconfont icon-netease"></text>
-      </view>
+    <view class="logo">
+        <text class="iconfont icon-neteasemusic"></text>
     </view>
-  </view>
+    <view class="login">
+        <button
+            class="getPhoneNumber"
+            wx:if="{{ phoneNumber == '' }}"
+            open-type="getPhoneNumber"
+            bindgetphonenumber="getPhoneNumber"
+        >
+            获取本地手机号
+        </button>
+        <view wx:else class="loginInfo">
+            <text class="phoneNumber">{{ serectNumber }}</text>
+            <text class="iconfont icon-biji" bindtap="changePhone"></text>
+            <view class="sign">中国移动提供认证服务</view>
+            <button bindtap="login">手机号登录</button>
+        </view>
+        <button class="visitors">访客登录</button>
+        <text class="protocol">登录即已同意《服务条款》《隐私政策》《儿童隐私政策》《中国移动认证服务协议》</text>
+        <view class="others" bindtap="loginWithQrCode">
+            <view class="wechat">
+                <text class="iconfont icon-weixin"></text>
+            </view>
+            <view class="qq">
+                <text class="iconfont icon-shejiaotubiao-03"></text>
+            </view>
+            <view class="weibo">
+                <text class="iconfont icon-shejiaotubiao-06"></text>
+            </view>
+            <view class="apple">
+                <text class="iconfont icon-apple-fill"></text>
+            </view>
+            <view class="netease">
+                <text class="iconfont icon-netease"></text>
+            </view>
+        </view>
+    </view>
 
-  <ChangePhone id="changephone" bindchangePhone="handleItemChane"></ChangePhone>
-  <QrCode id="qrcode"></QrCode>
+    <ChangePhone id="changephone" bindchangePhone="handleItemChane"></ChangePhone>
+    <QrCode id="qrcode"></QrCode>
 
-  <VerifyCode id='verifycode' title="请输入验证码" content="已发送到手机:" />
+    <VerifyCode id='verifycode' title="请输入验证码" content="已发送到手机:" />
 </view>

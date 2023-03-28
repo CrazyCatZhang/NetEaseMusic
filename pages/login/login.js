@@ -105,6 +105,10 @@ Page({
         _this.changephone.showView()
     },
 
+    navigateBack() {
+        wx.navigateBack()
+    },
+
     /**
      * Lifecycle function--Called when page load
      */
