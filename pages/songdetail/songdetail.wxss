@@ -209,3 +209,10 @@ van-slider {
     border-radius: 50%;
     background-color: #fefeff;
 }
+
+.custom-big-button {
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 50%;
+    background-color: #fefeff;
+}

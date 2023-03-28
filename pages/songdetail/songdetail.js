@@ -18,7 +18,9 @@ Page({
         currentTime: '00:00',
         durationTime: '',
         percentage: 0,
-        currentSeconds: 0
+        currentSeconds: 0,
+        barHeight: 2,
+        isDrag: false
     },
 
     handleMusicPlay() {
@@ -88,10 +90,18 @@ Page({
     },
 
     slotStart(e) {
+        this.setData({
+            barHeight: 4,
+            isDrag: true
+        })
         this.backgroundAudioManager.pause()
     },
 
     slotEnd() {
+        this.setData({
+            barHeight: 2,
+            isDrag: false
+        })
         const { song, musicLink, currentSeconds } = this.data
         this.backgroundAudioManager.seek(this.data.currentSeconds)
         this.backgroundAudioManager.startTime = currentSeconds
