@@ -1,10 +1,5 @@
-.loginWindow {
-    height: 175rpx;
-    background-color: #c13b2c;
-}
-
 page {
-    height: 2000rpx;
+    padding-bottom: 0;
     background-color: #c13b2c;
 }
 

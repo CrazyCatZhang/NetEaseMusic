@@ -36,6 +36,7 @@ Page({
             month: new Date().getMonth() + 1
         })
         getRecommendSong().then(result => {
+            console.log(result)
             result.data.dailySongs.map(item => {
                 for (const iterator of item.ar) {
                     item.singer += '/' + iterator.name

@@ -27,7 +27,7 @@
             <view
                 class="slot"
                 slot="header"
-                catchtouchmove="slotMove"
+                catch:touchmove="slotMove"
                 bindtouchstart="slotStart"
                 bindtouchend="slotEnd"
                 style="left: {{ 2 * slotLeft }}rpx;"

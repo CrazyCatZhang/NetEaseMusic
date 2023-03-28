@@ -11,20 +11,8 @@ page {
     position: relative;
 }
 
-.contaniner .header .bg {
-    width: 160%;
-    height: 240px;
-    margin-left: -30%;
-    border-radius: 0 0 50% 50%/15%;
-    overflow: hidden;
-    -webkit-border-radius: 0 0 50% 50%/15%;
-    -moz-border-radius: 0 0 50% 50%/15%;
-    -ms-border-radius: 0 0 50% 50%/15%;
-    -o-border-radius: 0 0 50% 50%/15%;
-}
-
 .contaniner .header image {
-    width: 100%;
+    width: 750rpx;
 }
 
 .navbar {

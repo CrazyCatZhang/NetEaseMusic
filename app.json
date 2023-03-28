@@ -40,5 +40,6 @@
             }
         ]
     },
-    "requiredBackgroundModes": ["audio", "location"]
+    "requiredBackgroundModes": ["audio", "location"],
+    "lazyCodeLoading": "requiredComponents"
 }
