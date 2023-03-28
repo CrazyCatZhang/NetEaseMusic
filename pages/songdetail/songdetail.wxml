@@ -16,9 +16,21 @@
     </view>
 
     <view class="progressControl">
-        <text>{{currentTime}}</text>
-        <van-progress percentage="60" stroke-width="2" show-pivot="{{false}}"  color="#b7b5b5" track-color="#7f7d7a"/>
-        <text>{{durationTime}}</text>
+        <text>{{ currentTime }}</text>
+        <l-progress
+            percent="{{ percentage }}"
+            l-slot-class="slot-class"
+            stroke-width="4"
+            active-color="#b9b8b7"
+            background-color="#999595"
+        >
+            <view
+                class="slot"
+                slot="header"
+                style="width: 10rpx; height: 10rpx; border-radius: 50%; background-color: #fefeff; display: block"
+            ></view>
+        </l-progress>
+        <text>{{ durationTime }}</text>
     </view>
 
     <view class="musicControl">

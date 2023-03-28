@@ -177,10 +177,15 @@ page {
 }
 
 .progressControl text {
+    width: 64rpx;
     color: #aba7a7;
     font-size: 25rpx;
 }
 
-.van-progress {
-    width: 480rpx;
+l-progress {
+    width: 500rpx !important;
+}
+
+l-progress .slot {
+    margin-top: -1rpx;
 }

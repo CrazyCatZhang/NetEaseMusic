@@ -14,7 +14,8 @@ Page({
         song: {},
         musicLink: '',
         currentTime: '00:00',
-        durationTime: ''
+        durationTime: '',
+        percentage: 0
     },
 
     handleMusicPlay() {
@@ -24,18 +25,19 @@ Page({
 
     musicControl(isPlay, musicId, musicLink) {
         if (isPlay) {
-            if (!musicLink) {
+            if (musicLink) {
+                this.backgroundAudioManager.src = musicLink
+                this.backgroundAudioManager.title = this.data.song.name
+            } else {
                 getSongUrl({ id: musicId }).then(result => {
                     musicLink = result.data[0].url
                     this.setData({
                         musicLink
                     })
                     this.backgroundAudioManager.src = musicLink
+                    this.backgroundAudioManager.title = this.data.song.name
                 })
-            } else {
-                this.backgroundAudioManager.src = musicLink
             }
-            this.backgroundAudioManager.title = this.data.song.name
         } else {
             this.backgroundAudioManager.pause()
         }
@@ -76,6 +78,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        console.log(1111)
         const { musicId } = options
         this.getMusicInfo(musicId)
 
@@ -98,8 +101,10 @@ Page({
         })
         this.backgroundAudioManager.onTimeUpdate(() => {
             let currentTime = moment(this.backgroundAudioManager.currentTime * 1000).format('mm:ss')
+            let percentage = this.backgroundAudioManager.currentTime / parseInt(this.data.durationTime)
             this.setData({
-                currentTime
+                currentTime,
+                percentage
             })
         })
     },
