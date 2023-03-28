@@ -37,7 +37,7 @@
     </view>
 
     <view class="musicControl">
-        <text class="iconfont icon-24gl-shuffle"></text>
+        <text class="iconfont icon-24gl-repeat2"></text>
         <text class="iconfont icon-shangyishou" id="prev" bindtap="handleSwitch"></text>
         <text class="iconfont {{ isPlay ? 'icon-zanting' : '.icon-bofang1 ' }}" bindtap="handleMusicPlay"></text>
         <text class="iconfont icon-xiayishou" id="next" bindtap="handleSwitch"></text>

@@ -1,228 +1,224 @@
 .container .myWindow {
-  height: 175rpx;
-  background-color: #1b1c21 !important;
+    height: 175rpx;
+    background-color: #1b1c21 !important;
 }
 
 .container .header {
-  text-align: center;
-  font-size: 38rpx;
-  color: #ffffff;
-  margin-bottom: 20rpx;
+    text-align: center;
+    font-size: 38rpx;
+    color: #ffffff;
+    margin-bottom: 20rpx;
 }
 
 .van-tabs__scroll {
-  background-color: #1b1b23 !important;
+    background-color: #1b1b23 !important;
 }
 
 .van-tab {
-  line-height: var(--tabs-line-height, 33px) !important;
+    line-height: var(--tabs-line-height, 33px) !important;
 }
 
 .content .top {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20rpx;
 }
 
 .content .top image {
-  width: 50rpx;
-  height: 50rpx;
-  vertical-align: middle;
-  margin-right: 10rpx;
+    width: 50rpx;
+    height: 50rpx;
+    vertical-align: middle;
+    margin-right: 10rpx;
 }
 
 .content .top text {
-  font-size: 35rpx;
-  color: #fff;
-  margin-right: 10rpx;
+    font-size: 35rpx;
+    color: #fff;
+    margin-right: 10rpx;
 }
 
 .content .top .count {
-  color: #656565;
-  font-size: 25rpx;
+    color: #656565;
+    font-size: 25rpx;
 }
 
 .content .detail {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
 }
 
 .content .detail .left .mainname {
-  display: inline-block;
-  width: 500rpx;
-  color: #fefefe;
-  margin-right: 5rpx;
-  font-size: 36rpx;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    display: inline-block;
+    width: 500rpx;
+    color: #fefefe;
+    margin-right: 5rpx;
+    font-size: 36rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .content .detail .left .alia {
-  color: #b0b0b0;
+    color: #b0b0b0;
 }
 
 .content .detail .left .songInfo {
-  width: 500rpx;
-  color: #b0b0b0;
-  font-size: 28rpx;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    width: 500rpx;
+    color: #b0b0b0;
+    font-size: 28rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .content .detail .right {
-  color: #878787;
+    color: #878787;
 }
 
 .content .detail .right text {
-  font-size: 52rpx;
+    font-size: 52rpx;
 }
 
 .content .detail .right .icon-bofang {
-  margin-right: 20rpx;
+    margin-right: 20rpx;
 }
 
 .content .voice .detail .left {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  color: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #f4f4f4;
 }
 
 .content .voice .detail .left image {
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 20rpx;
-  margin-right: 20rpx;
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 20rpx;
+    margin-right: 20rpx;
 }
 
 .content .voice .detail .left .name {
-  width: 462rpx;
+    width: 462rpx;
 }
 
 .content .video .detail {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 20rpx;
 }
 
 .content .video .detail image {
-  width: 200rpx;
-  height: 120rpx;
-  border-radius: 20rpx;
-  margin-right: 30rpx;
+    width: 200rpx;
+    height: 120rpx;
+    border-radius: 20rpx;
+    margin-right: 30rpx;
 }
 
 .video .info .name {
-  width: 400rpx;
-  color: #f9f9f9;
-  font-size: 30rpx;
-  margin-bottom: 10rpx;
+    width: 400rpx;
+    color: #f9f9f9;
+    font-size: 30rpx;
+    margin-bottom: 10rpx;
 }
 
 .video .info .other {
-  color: #636363;
-  font-size: 25rpx;
+    color: #636363;
+    font-size: 25rpx;
 }
 
 .content .playlist .detail {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 20rpx;
 }
 
 .content .playlist image {
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 20rpx;
-  margin-right: 30rpx;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 20rpx;
+    margin-right: 30rpx;
 }
 
 .content .playlist .info .name {
-  width: 500rpx;
-  color: #f6f6f6;
-  font-size: 35rpx;
-  margin-bottom: 8rpx;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    width: 500rpx;
+    color: #f6f6f6;
+    font-size: 35rpx;
+    margin-bottom: 8rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .content .playlist .info .creator {
-  color: #d5d5d5;
-  font-size: 25rpx;
+    color: #d5d5d5;
+    font-size: 25rpx;
 }
 
-
-
 .content .album .detail {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 20rpx;
 }
 
 .content .album image {
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 20rpx;
-  margin-right: 30rpx;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 20rpx;
+    margin-right: 30rpx;
 }
 
 .content .album .info .name {
-  width: 500rpx;
-  color: #f6f6f6;
-  font-size: 35rpx;
-  margin-bottom: 8rpx;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    width: 500rpx;
+    color: #f6f6f6;
+    font-size: 35rpx;
+    margin-bottom: 8rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .content .album .info .creator {
-  color: #d5d5d5;
-  font-size: 25rpx;
+    color: #d5d5d5;
+    font-size: 25rpx;
 }
 
-
-
 .content .podcast .detail {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  align-items: center;
-  padding: 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 20rpx;
 }
 
 .content .podcast image {
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 20rpx;
-  margin-right: 30rpx;
+    width: 140rpx;
+    height: 140rpx;
+    border-radius: 20rpx;
+    margin-right: 30rpx;
 }
 
 .content .podcast .info .name {
-  width: 500rpx;
-  color: #f6f6f6;
-  font-size: 35rpx;
-  margin-bottom: 8rpx;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    width: 500rpx;
+    color: #f6f6f6;
+    font-size: 35rpx;
+    margin-bottom: 8rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .content .podcast .info .creator {
-  color: #d5d5d5;
-  font-size: 25rpx;
+    color: #d5d5d5;
+    font-size: 25rpx;
 }

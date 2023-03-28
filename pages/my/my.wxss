@@ -1,306 +1,306 @@
 .myContainer .myWindow {
-  height: 175rpx;
-  background-color: #1b1c21 !important;
+    height: 175rpx;
+    background-color: #1b1c21 !important;
 }
 
 .myHeader {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20rpx;
-  line-height: 40rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20rpx;
+    line-height: 40rpx;
 }
 
 .myHeader text {
-  font-size: 40rpx;
-  color: #f1f3f4;
-  font-weight: bold;
+    font-size: 40rpx;
+    color: #f1f3f4;
+    font-weight: bold;
 }
 
 .userSection {
-  padding: 20rpx;
+    padding: 20rpx;
 }
 
 .userSection .userInfo {
-  position: relative;
-  height: 240rpx;
-  background-color: #323338;
-  border-radius: 20rpx;
-  margin-top: 100rpx;
+    position: relative;
+    height: 240rpx;
+    background-color: #323338;
+    border-radius: 20rpx;
+    margin-top: 100rpx;
 }
 
 .userInfo image {
-  position: absolute;
-  width: 180rpx;
-  height: 180rpx;
-  top: -100rpx;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
+    position: absolute;
+    width: 180rpx;
+    height: 180rpx;
+    top: -100rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
 }
 
 .userInfo .userProfile {
-  position: absolute;
-  color: #e4e4e6;
-  font-size: 40rpx;
-  top: 100rpx;
-  left: 50%;
-  transform: translateX(-50%);
+    position: absolute;
+    color: #e4e4e6;
+    font-size: 40rpx;
+    top: 100rpx;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .userInfo .userProfile .details {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 25rpx;
-  color: #949499;
-  font-weight: bold;
-  margin-top: 18rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25rpx;
+    color: #949499;
+    font-weight: bold;
+    margin-top: 18rpx;
 }
 
 .userInfo .login {
-  position: absolute;
-  color: #e4e4e6;
-  font-size: 40rpx;
-  top: 120rpx;
-  left: 260rpx;
+    position: absolute;
+    color: #e4e4e6;
+    font-size: 40rpx;
+    top: 120rpx;
+    left: 260rpx;
 }
 
 .userSection .musicAppclation {
-  /* height: 160rpx; */
-  background-color: #323338;
-  border-radius: 20rpx;
-  margin-top: 30rpx;
+    /* height: 160rpx; */
+    background-color: #323338;
+    border-radius: 20rpx;
+    margin-top: 30rpx;
 }
 
 .musicAppclation .top {
-  min-height: 50rpx;
-  border-bottom: 1px solid #3b3b42;
+    min-height: 50rpx;
+    border-bottom: 1px solid #3b3b42;
 }
 
 .musicAppclation .top .apps {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-content: center;
-  padding: 25rpx 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    padding: 25rpx 0;
 }
 
 .musicAppclation .top .apps view {
-  width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  color: #a8a8ac;
-  font-size: 25rpx;
-  margin-top: 20rpx;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color: #a8a8ac;
+    font-size: 25rpx;
+    margin-top: 20rpx;
 }
 
 .musicAppclation .top .apps image {
-  width: 60rpx;
-  height: 60rpx;
-  margin-bottom: 8rpx;
+    width: 60rpx;
+    height: 60rpx;
+    margin-bottom: 8rpx;
 }
 
 .musicAppclation .bottom {
-  height: 110rpx;
-  line-height: 110rpx;
-  margin: 0 auto;
-  text-align: center;
-  color: #72737a;
-  font-size: 28rpx;
+    height: 110rpx;
+    line-height: 110rpx;
+    margin: 0 auto;
+    text-align: center;
+    color: #72737a;
+    font-size: 28rpx;
 }
 
 .myFavorite {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 160rpx;
-  background-color: #323338;
-  border-radius: 20rpx;
-  margin-top: 30rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 160rpx;
+    background-color: #323338;
+    border-radius: 20rpx;
+    margin-top: 30rpx;
 }
 
 .myFavorite .left {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .myFavorite .left .album {
-  width: 100rpx;
-  height: 100rpx;
-  line-height: 100rpx;
-  text-align: center;
-  background-color: #a5a5a5;
-  border-radius: 20rpx;
-  margin-right: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #a5a5a5;
+    border-radius: 20rpx;
+    margin-right: 20rpx;
 }
 
 .myFavorite .left .album text {
-  color: #ffffff;
-  font-size: 60rpx;
+    color: #ffffff;
+    font-size: 60rpx;
 }
 
 .myFavorite .left .info .title {
-  color: #e8e9eb;
-  margin-bottom: 10rpx;
+    color: #e8e9eb;
+    margin-bottom: 10rpx;
 }
 
 .myFavorite .left .info .count {
-  color: #95969d;
-  font-size: 25rpx;
+    color: #95969d;
+    font-size: 25rpx;
 }
 
 .myFavorite .right {
-  width: 150rpx;
-  background-color: #2f2e35;
-  padding: 10rpx;
-  border-radius: 50rpx;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+    width: 150rpx;
+    background-color: #2f2e35;
+    padding: 10rpx;
+    border-radius: 50rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .right image {
-  width: 40rpx;
-  height: 40rpx;
-  vertical-align: middle;
+    width: 40rpx;
+    height: 40rpx;
+    vertical-align: middle;
 }
 
 .right text {
-  font-size: 25rpx;
-  color: #eeedf5;
+    font-size: 25rpx;
+    color: #eeedf5;
 }
 
 .songList {
-  margin-top: 40rpx;
+    margin-top: 40rpx;
 }
 
 .songList .navigator {
-  color: #90909a;
-  text-align: center;
-  margin-bottom: 30rpx;
+    color: #90909a;
+    text-align: center;
+    margin-bottom: 30rpx;
 }
 
 .navigator a:hover {
-  color: #eaecec;
+    color: #eaecec;
 }
 
 .create {
-  background-color: #282831;
-  border-radius: 20rpx;
-  padding: 25rpx;
+    background-color: #282831;
+    border-radius: 20rpx;
+    padding: 25rpx;
 }
 
 .create .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .create .header .left {
-  color: #969799;
-  font-size: 25rpx;
+    color: #969799;
+    font-size: 25rpx;
 }
 
 .create .header .right text {
-  font-size: 40rpx;
-  color: #7c7d80;
-  margin-right: 25rpx;
+    font-size: 40rpx;
+    color: #7c7d80;
+    margin-right: 25rpx;
 }
 
 .create .header .right text:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  margin-top: 30rpx;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30rpx;
 }
 
 .content .detail {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 25rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 25rpx;
 }
 
 .content .detail .album {
-  width: 100rpx;
-  height: 100rpx;
-  line-height: 100rpx;
-  text-align: center;
-  background-color: #a5a5a5;
-  border-radius: 20rpx;
-  margin-right: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    background-color: #a5a5a5;
+    border-radius: 20rpx;
+    margin-right: 20rpx;
 }
 
 .content .detail .info .title {
-  color: #e8e9eb;
-  margin-bottom: 10rpx;
+    color: #e8e9eb;
+    margin-bottom: 10rpx;
 }
 
 .content .detail .info .count {
-  color: #95969d;
-  font-size: 25rpx;
+    color: #95969d;
+    font-size: 25rpx;
 }
 
 .create .content .bottom {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .create .content .import {
-  width: 100rpx;
-  height: 100rpx;
-  background-color: #323137;
-  border-radius: 20rpx;
-  text-align: center;
-  margin-right: 20rpx;
+    width: 100rpx;
+    height: 100rpx;
+    background-color: #323137;
+    border-radius: 20rpx;
+    text-align: center;
+    margin-right: 20rpx;
 }
 
 .create .content .import text {
-  line-height: 100rpx;
-  font-size: 50rpx;
-  color: #f6f6f9;
+    line-height: 100rpx;
+    font-size: 50rpx;
+    color: #f6f6f9;
 }
 
 .create .content text {
-  color: #f8f9fe;
+    color: #f8f9fe;
 }
 
 .collection {
-  background-color: #282831;
-  border-radius: 20rpx;
-  padding: 25rpx;
-  margin-top: 25rpx;
+    background-color: #282831;
+    border-radius: 20rpx;
+    padding: 25rpx;
+    margin-top: 25rpx;
 }
 
 .collection .header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .collection .header .left {
-  color: #969799;
-  font-size: 25rpx;
+    color: #969799;
+    font-size: 25rpx;
 }
 
 .collection .header .right text {
-  font-size: 40rpx;
-  color: #7c7d80;
+    font-size: 40rpx;
+    color: #7c7d80;
 }
 
 /* .collection .content {

@@ -1,9 +1,9 @@
 {
-  "usingComponents": {
-    "VerifyCode": "../../components/VerifyCode/VerifyCode",
-    "ChangePhone": "../../components/ChangePhone/ChangePhone",
-    "QrCode": "../../components/QrCode/QrCode"
-  },
-  "navigationBarBackgroundColor": "#c13b2c",
-  "navigationBarTitleText": "登录"
+    "usingComponents": {
+        "VerifyCode": "../../components/VerifyCode/VerifyCode",
+        "ChangePhone": "../../components/ChangePhone/ChangePhone",
+        "QrCode": "../../components/QrCode/QrCode"
+    },
+    "navigationBarBackgroundColor": "#c13b2c",
+    "navigationBarTitleText": "登录"
 }
