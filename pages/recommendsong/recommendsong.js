@@ -1,5 +1,6 @@
 // pages/recommendsong/recommendsong.js
 import { getRecommendSong } from '../../services/user'
+import PubSub from 'pubsub-js'
 
 Page({
     /**
@@ -8,11 +9,15 @@ Page({
     data: {
         day: '',
         month: '',
-        recommendSontList: []
+        recommendSontList: [],
+        index: 0
     },
 
     toSongDetail(event) {
-        const { song } = event.currentTarget.dataset
+        const { song, index } = event.currentTarget.dataset
+        this.setData({
+            index
+        })
         wx.navigateTo({
             url: '/pages/songdetail/songdetail?musicId=' + song.id
         })
@@ -40,6 +45,23 @@ Page({
             this.setData({
                 recommendSontList: result.data.dailySongs
             })
+        })
+
+        PubSub.subscribe('switchType', (_, type) => {
+            let { recommendSontList, index } = this.data
+            if (type === 'prev') {
+                index === 0 && (index = recommendSontList.length)
+                index -= 1
+            } else {
+                index === recommendSontList.length - 1 && (index = -1)
+                index += 1
+            }
+
+            this.setData({
+                index
+            })
+            const musicId = recommendSontList[index].id
+            PubSub.publish('musicId', musicId)
         })
     },
 

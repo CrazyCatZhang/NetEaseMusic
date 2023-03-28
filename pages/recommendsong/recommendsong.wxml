@@ -20,7 +20,7 @@
             </view>
             <view class="right"></view>
         </view>
-        <view wx:for="{{ recommendSontList }}" wx:key="id" class="detail" data-song="{{item}}" bindtap="toSongDetail">
+        <view wx:for="{{ recommendSontList }}" wx:key="id" class="detail" data-index="{{index}}" data-song="{{item}}" bindtap="toSongDetail">
             <view class="left">
                 <image src="{{item.al.picUrl}}"></image>
                 <view>

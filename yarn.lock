@@ -19,6 +19,7 @@ __metadata:
     "@vant/weapp": ^1.10.14
     crypto-js: ^4.1.1
     js-base64: ^3.7.5
+    pubsub-js: ^1.9.4
   languageName: unknown
   linkType: soft
 
@@ -33,5 +34,12 @@ __metadata:
   version: 3.7.5
   resolution: "js-base64@npm:3.7.5"
   checksum: 67a78c8b1c47b73f1c6fba1957e9fe6fd9dc78ac93ac46cc2e43472dcb9cf150d126fb0e593192e88e0497354fa634d17d255add7cc6ee3c7b4d29870faa8e18
+  languageName: node
+  linkType: hard
+
+"pubsub-js@npm:^1.9.4":
+  version: 1.9.4
+  resolution: "pubsub-js@npm:1.9.4"
+  checksum: 4644a74d0731786bc10b5b01418ee8221f1dcd3ce6b6b011cf383059f625d6ce658e83c234c67dcdd3058023867bdcf128c1edff6cc05d09a3206d2276e14d36
   languageName: node
   linkType: hard

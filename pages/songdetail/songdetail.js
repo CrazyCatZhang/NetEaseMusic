@@ -1,5 +1,6 @@
 // pages/songdetail/songdetail.js
 import { getSongDetail, getSongUrl } from '../../services/song'
+import PubSub from 'pubsub-js'
 
 const appInstance = getApp()
 
@@ -14,12 +15,12 @@ Page({
 
     handleMusicPlay() {
         const isPlay = !this.data.isPlay
-        this.musicControl(isPlay)
+        this.musicControl(isPlay, this.data.song.id)
     },
 
-    musicControl(isPlay) {
+    musicControl(isPlay, musicId) {
         if (isPlay) {
-            getSongUrl({ id: this.data.song.id }).then(result => {
+            getSongUrl({ id: musicId }).then(result => {
                 const musicUrl = result.data[0].url
                 this.backgroundAudioManager.src = musicUrl
                 this.backgroundAudioManager.title = this.data.song.name
@@ -33,12 +34,19 @@ Page({
         wx.navigateBack()
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad(options) {
-        const { musicId } = options
-        getSongDetail({ ids: musicId }).then(result => {
+    handleSwitch(event) {
+        const type = event.currentTarget.id
+        this.backgroundAudioManager.stop()
+        PubSub.subscribe('musicId', (_, musicId) => {
+            this.getMusicInfo(musicId)
+            this.musicControl(true, musicId)
+            PubSub.unsubscribe('musicId')
+        })
+        PubSub.publish('switchType', type)
+    },
+
+    getMusicInfo(ids) {
+        getSongDetail({ ids }).then(result => {
             result.songs.map(item => {
                 for (const iterator of item.ar) {
                     item.singer += '/' + iterator.name
@@ -49,8 +57,16 @@ Page({
                 song: result.songs[0]
             })
         })
+    },
 
-        if (appInstance.globalData.isMusicPlay && appInstance.globalData.musicId === musicId) {
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad(options) {
+        const { musicId } = options
+        this.getMusicInfo(musicId)
+
+        if (appInstance.globalData.isMusicPlay && appInstance.globalData.musicId === +musicId) {
             this.setData({
                 isPlay: true
             })
@@ -59,7 +75,7 @@ Page({
         this.backgroundAudioManager = wx.getBackgroundAudioManager()
         this.backgroundAudioManager.onPlay(() => {
             this.changePlayState(true)
-            appInstance.globalData.musicId = musicId
+            appInstance.globalData.musicId = this.data.song.id
         })
         this.backgroundAudioManager.onPause(() => {
             this.changePlayState(false)

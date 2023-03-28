@@ -4,6 +4,7 @@
   "dependencies": {
     "@vant/weapp": "^1.10.14",
     "crypto-js": "^4.1.1",
-    "js-base64": "^3.7.5"
+    "js-base64": "^3.7.5",
+    "pubsub-js": "^1.9.4"
   }
 }

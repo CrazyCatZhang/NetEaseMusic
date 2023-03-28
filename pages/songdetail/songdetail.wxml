@@ -17,9 +17,9 @@
 
     <view class="musicControl">
         <text class="iconfont icon-24gl-shuffle"></text>
-        <text class="iconfont icon-shangyishou"></text>
+        <text class="iconfont icon-shangyishou" id="prev" bindtap="handleSwitch"></text>
         <text class="iconfont {{ isPlay ? 'icon-zanting' : '.icon-bofang1 ' }}" bindtap="handleMusicPlay"></text>
-        <text class="iconfont icon-xiayishou"></text>
+        <text class="iconfont icon-xiayishou" id="next" bindtap="handleSwitch"></text>
         <text class="iconfont icon-24gf-playlist"></text>
     </view>
 </view>
