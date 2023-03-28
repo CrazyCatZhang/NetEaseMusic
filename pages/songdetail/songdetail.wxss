@@ -187,5 +187,12 @@ l-progress {
 }
 
 l-progress .slot {
-    margin-top: -1rpx;
+    position: absolute;
+    left: 0;
+    top: -4rpx;
+    width: 10rpx;
+    height: 10rpx;
+    border-radius: 50%;
+    background-color: #fefeff;
+    display: block;
 }

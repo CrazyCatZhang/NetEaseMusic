@@ -27,7 +27,10 @@
             <view
                 class="slot"
                 slot="header"
-                style="width: 10rpx; height: 10rpx; border-radius: 50%; background-color: #fefeff; display: block"
+                catchtouchmove="slotMove"
+                bindtouchstart="slotStart"
+                bindtouchend="slotEnd"
+                style="left: {{ 2 * slotLeft }}rpx;"
             ></view>
         </l-progress>
         <text>{{ durationTime }}</text>
