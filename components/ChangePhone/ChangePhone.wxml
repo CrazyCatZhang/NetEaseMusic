@@ -1,28 +1,65 @@
-<view class="wx-change-phone-bg" hidden="{{!isShow}}">
-  <view class='wx-mask'></view>
-  <view class="change-phone-view">
-    <text class="title">登录体验更多精彩</text>
-    <text class="remind">未注册手机号登录将自动创建账号</text>
-    <view class="inputItem">
-      <input type="number" placeholder="输入手机号" placeholder-style="color:#434343;" bindinput="handleInput" id="phone" />
-      <view class="registerContainer" hidden="{{!newUser}}">
-        <view class="captcha">
-          <input type="text" name="captcha" id="captcha" placeholder="输入验证码" placeholder-style="color:#434343;" bindinput="handleInput" />
-          <button wx:if="{{send}}" class="codeBtn1" type="default" plain="true" bindtap="getCode">获取验证码
-          </button>
-          <button wx:if="{{alreadySend}}" class="codeBtn2" type="default" plain="true" disabled="true">
-            {{'重新发送' + seconds + 's'}}
-          </button>
+<view class="wx-change-phone-bg" hidden="{{ !isShow }}">
+    <view class="wx-mask"></view>
+    <view class="change-phone-view">
+        <text class="title">登录体验更多精彩</text>
+        <text class="remind">未注册手机号登录将自动创建账号</text>
+        <view class="inputItem">
+            <input
+                type="number"
+                placeholder="输入手机号"
+                placeholder-style="color:#434343;"
+                bindinput="handleInput"
+                id="phone"
+            />
+            <view class="registerContainer" hidden="{{ !newUser }}">
+                <view class="captcha">
+                    <input
+                        type="text"
+                        name="captcha"
+                        id="captcha"
+                        placeholder="输入验证码"
+                        placeholder-style="color:#434343;"
+                        bindinput="handleInput"
+                    />
+                    <button wx:if="{{ send }}" class="codeBtn1" type="default" plain="true" bindtap="getCode">
+                        获取验证码
+                    </button>
+                    <button wx:if="{{ alreadySend }}" class="codeBtn2" type="default" plain="true" disabled="true">
+                        {{ '重新发送' + seconds + 's' }}
+                    </button>
+                </view>
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="输入密码"
+                    placeholder-style="color:#434343;"
+                    bindinput="handleInput"
+                />
+                <input
+                    type="password"
+                    name="repassword"
+                    id="repassword"
+                    placeholder="确认密码"
+                    placeholder-style="color:#434343;"
+                    bindinput="handleInput"
+                />
+                <input
+                    type="text"
+                    name="nickname"
+                    id="nickname"
+                    placeholder="输入用户昵称"
+                    placeholder-style="color:#434343;"
+                    bindinput="handleInput"
+                />
+            </view>
         </view>
-        <input type="password" name="password" id="password" placeholder="输入密码" placeholder-style="color:#434343;" bindinput="handleInput" />
-        <input type="password" name="repassword" id="repassword" placeholder="确认密码" placeholder-style="color:#434343;" bindinput="handleInput" />
-        <input type="text" name="nickname" id="nickname" placeholder="输入用户昵称" placeholder-style="color:#434343;" bindinput="handleInput" />
-      </view>
+        <button wx:if="{{ !newUser }}" class=" {{ disabled ? 'nextDisabled' : 'next' }}" bindtap="handleItemChange">
+            下一步
+        </button>
+        <button wx:else class="next" bindtap="handleItemChange">注册并登录</button>
+        <view class="find">
+            <a href="#">找回账号</a>
+        </view>
     </view>
-    <button wx:if="{{!newUser}}" class=" {{disabled ? 'nextDisabled' : 'next' }}" bindtap="handleItemChange">下一步</button>
-    <button wx:else class="next" bindtap="handleItemChange">注册并登录</button>
-    <view class="find">
-      <a href="#">找回账号</a>
-    </view>
-  </view>
 </view>

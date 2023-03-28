@@ -1,99 +1,104 @@
 <view class="container">
-  <view class="content">
-    <van-tabs swipeable title-active-color="#fefefe" title-inactive-color="#6a6a6a" line-width="40rpx">
-      <van-tab title="歌曲">
-        <view class="top">
-          <image src="../../static/application/play.png" mode="" />
-          <text>播放全部</text>
-          <text class="count">({{songs.length}})</text>
-        </view>
-        <view wx:for="{{songs}}" wx:key="resourceId" class="detail" data-song="{{item}}" data-index="{{index}}" bindtap="toSongDetail">
-          <view class="left">
-            <view class="name">
-              <text class="mainname">{{item.data.name}}</text>
-            </view>
-            <view wx:if="{{item.singer}}" class="songInfo">
-              {{item.singer}}
-            </view>
-          </view>
-          <view class="right">
-            <text class="iconfont icon-caozuo-bofang"></text>
-            <text class="iconfont icon-gengduo-shuxiang"></text>
-          </view>
-        </view>
-      </van-tab>
-      <van-tab class="voice" title="声音">
-        <view class="top">
-          <image src="../../static/application/play.png" mode="" />
-          <text>播放全部</text>
-          <text class="count">({{voice.length}})</text>
-        </view>
-        <view wx:for="{{voice}}" wx:key="resourceId" class="detail">
-          <view class="left">
-            <image src="{{item.data.pubDJProgramData.coverUrl}}" mode="" />
-            <view class="info">
-              <view class="name">
-                {{item.data.pubDJProgramData.name}}
-              </view>
-            </view>
-          </view>
-          <view class="right">
-            <text class="iconfont icon-gengduo-shuxiang"></text>
-          </view>
-        </view>
-      </van-tab>
-      <van-tab class="video" title="视频">
-        <view wx:for="{{video}}" wx:key="resourceId" class="detail">
-          <image src="{{item.data.coverUrl}}" mode="" />
-          <view class="info">
-            <view class="name">
-              {{item.data.title ? item.data.title : item.data.name}}
-            </view>
-            <view class="other">
-              {{item.time}}, by {{item.data.creator ? item.data.creator.nickname : item.data.artists[0].name}}
-            </view>
-          </view>
-        </view>
-      </van-tab>
-      <van-tab class="playlist" title="歌单">
-        <view wx:for="{{playlist}}" wx:key="resourceId" class="detail">
-          <image src="{{item.data.coverImgUrl}}" mode="" />
-          <view class="info">
-            <view class="name">
-              {{item.data.name}}
-            </view>
-            <view class="creator">
-              by {{item.data.creator.nickname}}
-            </view>
-          </view>
-        </view>
-      </van-tab>
-      <van-tab class="album" title="专辑">
-        <view wx:for="{{album}}" wx:key="resourceId" class="detail">
-          <image src="{{item.data.blurPicUrl}}" mode="" />
-          <view class="info">
-            <view class="name">
-              {{item.data.name}}
-            </view>
-            <view class="creator">
-              {{item.data.artist.name}} {{item.data.artist.trans ? '(' + item.data.artist.trans + ')' : ''}}
-            </view>
-          </view>
-        </view>
-      </van-tab>
-      <van-tab class="podcast" title="播客">
-        <view wx:for="{{podcast}}" wx:key="resourceId" class="detail">
-          <image src="{{item.data.picUrl}}" mode="" />
-          <view class="info">
-            <view class="name">
-              {{item.data.name}}
-            </view>
-            <view class="creator">
-              by {{item.data.dj.nickname}}
-            </view>
-          </view>
-        </view>
-      </van-tab>
-    </van-tabs>
-  </view>
+    <view class="content">
+        <van-tabs swipeable title-active-color="#fefefe" title-inactive-color="#6a6a6a" line-width="40rpx">
+            <van-tab title="歌曲">
+                <view class="top">
+                    <image src="../../static/application/play.png" mode="" />
+                    <text>播放全部</text>
+                    <text class="count">({{ songs.length }})</text>
+                </view>
+                <view
+                    wx:for="{{ songs }}"
+                    wx:key="resourceId"
+                    class="detail"
+                    data-song="{{ item }}"
+                    data-index="{{ index }}"
+                    bindtap="toSongDetail"
+                >
+                    <view class="left">
+                        <view class="name">
+                            <text class="mainname">{{ item.data.name }}</text>
+                        </view>
+                        <view wx:if="{{ item.singer }}" class="songInfo">
+                            {{ item.singer }}
+                        </view>
+                    </view>
+                    <view class="right">
+                        <text class="iconfont icon-caozuo-bofang"></text>
+                        <text class="iconfont icon-gengduo-shuxiang"></text>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab class="voice" title="声音">
+                <view class="top">
+                    <image src="../../static/application/play.png" mode="" />
+                    <text>播放全部</text>
+                    <text class="count">({{ voice.length }})</text>
+                </view>
+                <view wx:for="{{ voice }}" wx:key="resourceId" class="detail">
+                    <view class="left">
+                        <image src="{{item.data.pubDJProgramData.coverUrl}}" mode="" />
+                        <view class="info">
+                            <view class="name">
+                                {{ item.data.pubDJProgramData.name }}
+                            </view>
+                        </view>
+                    </view>
+                    <view class="right">
+                        <text class="iconfont icon-gengduo-shuxiang"></text>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab class="video" title="视频">
+                <view wx:for="{{ video }}" wx:key="resourceId" class="detail">
+                    <image src="{{item.data.coverUrl}}" mode="" />
+                    <view class="info">
+                        <view class="name">
+                            {{ item.data.title ? item.data.title : item.data.name }}
+                        </view>
+                        <view class="other">
+                            {{ item.time }}, by
+                            {{ item.data.creator ? item.data.creator.nickname : item.data.artists[0].name }}
+                        </view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab class="playlist" title="歌单">
+                <view wx:for="{{ playlist }}" wx:key="resourceId" class="detail">
+                    <image src="{{item.data.coverImgUrl}}" mode="" />
+                    <view class="info">
+                        <view class="name">
+                            {{ item.data.name }}
+                        </view>
+                        <view class="creator">by {{ item.data.creator.nickname }}</view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab class="album" title="专辑">
+                <view wx:for="{{ album }}" wx:key="resourceId" class="detail">
+                    <!-- <image src="{{item.data.blurPicUrl}}" mode="" /> -->
+                    <view class="info">
+                        <view class="name">
+                            {{ item.data.name }}
+                        </view>
+                        <view class="creator">
+                            {{ item.data.artist.name }}
+                            {{ item.data.artist.trans ? '(' + item.data.artist.trans + ')' : '' }}
+                        </view>
+                    </view>
+                </view>
+            </van-tab>
+            <van-tab class="podcast" title="播客">
+                <view wx:for="{{ podcast }}" wx:key="resourceId" class="detail">
+                    <image src="{{item.data.picUrl}}" mode="" />
+                    <view class="info">
+                        <view class="name">
+                            {{ item.data.name }}
+                        </view>
+                        <view class="creator">by {{ item.data.dj.nickname }}</view>
+                    </view>
+                </view>
+            </van-tab>
+        </van-tabs>
+    </view>
 </view>

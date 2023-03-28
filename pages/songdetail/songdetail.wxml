@@ -17,8 +17,17 @@
 
     <view class="progressControl">
         <text>{{ currentTime }}</text>
-        <van-slider value="{{ percentage }}" use-button-slot catch:drag="slotMove" bind:drag-start="slotStart" bind:drag-end="slotEnd" active-color="#b9b8b7" inactive-color="#999595" bar-height="{{barHeight}}">
-            <view class="{{isDrag? 'custom-big-button' : 'custom-button'}}" slot="button"></view>
+        <van-slider
+            value="{{ percentage }}"
+            use-button-slot
+            catch:drag="slotMove"
+            bind:drag-start="slotStart"
+            bind:drag-end="slotEnd"
+            active-color="#b9b8b7"
+            inactive-color="#999595"
+            bar-height="{{ barHeight }}"
+        >
+            <view class="{{ isDrag ? 'custom-big-button' : 'custom-button' }}" slot="button"></view>
         </van-slider>
         <text>{{ durationTime }}</text>
     </view>
