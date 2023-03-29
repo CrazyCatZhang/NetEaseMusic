@@ -1,17 +1,38 @@
 // pages/search/search.js
+import '../../utils/lodash-fix'
+import _ from '../../utils/lodash'
 import { getHotPopularList, getHotTopicList, getHotSearchList } from '../../services/rank'
-import { getDefaultSearch } from '../../services/search'
+import { getDefaultSearch, searchKeywords } from '../../services/search'
 
 Page({
     /**
      * Page initial data
      */
     data: {
-        searchList: {},
+        hotSearchList: {},
         topicList: {},
         popularList: {},
-        defaultKeyword: ''
+        defaultKeyword: '',
+        searchContent: '',
+        searchList: []
     },
+
+    handleInput: _.debounce(function (e) {
+        this.setData({
+            searchContent: e.detail.value.trim()
+        })
+        if (this.data.searchContent) {
+            searchKeywords({ keywords: this.data.searchContent }).then(result => {
+                this.setData({
+                    searchList: result.result.songs
+                })
+            })
+        } else {
+            this.setData({
+                searchList: []
+            })
+        }
+    }, 500),
 
     /**
      * Lifecycle function--Called when page load
@@ -19,7 +40,7 @@ Page({
     onLoad(options) {
         getHotSearchList().then(result => {
             this.setData({
-                searchList: result
+                hotSearchList: result
             })
         })
         getHotTopicList().then(result => {

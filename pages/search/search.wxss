@@ -1,3 +1,7 @@
+page {
+    padding-bottom: 0;
+}
+
 .header {
     display: flex;
     flex-direction: row;
@@ -116,4 +120,32 @@
 
 .swiperItem .contentList .sign {
     color: #e54f47;
+}
+
+.showSearchContent {
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 100rpx;
+    padding: 0 30rpx;
+    background-color: #1b1b25;
+    z-index: 1000;
+}
+
+.searchItem {
+    height: 80rpx;
+    line-height: 80rpx;
+    display: flex;
+}
+
+.searchItem .icon-sousuo {
+    color: #8c8d93;
+}
+
+.searchItem .content {
+    flex: 1;
+    margin-left: 20rpx;
+    color: #f3f4fa;
+    border-bottom: 1rpx solid #33343d;
+    font-size: 30rpx;
 }

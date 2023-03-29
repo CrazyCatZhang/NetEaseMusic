@@ -4,4 +4,8 @@ async function getDefaultSearch() {
     return await request('/search/default')
 }
 
-export { getDefaultSearch }
+async function searchKeywords({ keywords }) {
+    return await request('/cloudsearch', { keywords, limit: 10 })
+}
+
+export { getDefaultSearch, searchKeywords }
