@@ -42,7 +42,7 @@
         <view class="searchList">
             <view class="searchItem" wx:for="{{ searchList }}" wx:key="id">
                 <text class="iconfont icon-sousuo"></text>
-                <text bindtap="toSongDetail" id="{{ item.id }}" class="content">{{ item.name }}</text>
+                <text bindtap="toSongDetail" data-song="{{item}}" data-index="{{index}}" id="{{ item.id }}" class="content">{{ item.name }}</text>
             </view>
         </view>
     </view>

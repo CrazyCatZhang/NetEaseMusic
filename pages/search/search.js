@@ -4,6 +4,7 @@ import _ from '../../utils/lodash'
 import { getHotPopularList, getHotTopicList, getHotSearchList } from '../../services/rank'
 import { getDefaultSearch, searchKeywords } from '../../services/search'
 import Dialog from '@vant/weapp/dialog/dialog'
+import PubSub from 'pubsub-js'
 
 Page({
     /**
@@ -16,7 +17,8 @@ Page({
         defaultKeyword: '',
         searchContent: '',
         searchList: [],
-        historyList: []
+        historyList: [],
+        index: 0
     },
 
     clearHistory() {
@@ -70,6 +72,16 @@ Page({
         })
     },
 
+    toSongDetail(e) {
+        const { song, index } = e.currentTarget.dataset
+        this.setData({
+            index
+        })
+        wx.navigateTo({
+            url: '/pages/songdetail/songdetail?musicId=' + song.id
+        })
+    },
+
     /**
      * Lifecycle function--Called when page load
      */
@@ -99,6 +111,23 @@ Page({
             this.setData({
                 defaultKeyword: result.data.showKeyword
             })
+        })
+
+        PubSub.subscribe('switchType', (_, type) => {
+            let { searchList, index } = this.data
+            if (type === 'prev') {
+                index === 0 && (index = searchList.length)
+                index -= 1
+            } else {
+                index === searchList.length - 1 && (index = -1)
+                index += 1
+            }
+
+            this.setData({
+                index
+            })
+            const musicId = searchList[index].id
+            PubSub.publish('musicId', musicId)
         })
     },
 

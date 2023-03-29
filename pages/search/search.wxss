@@ -17,7 +17,7 @@ page {
 
 .header .singal {
     color: #f5f6fb;
-    font-size: 35rpx;
+    font-size: 32rpx;
     font-weight: 400;
 }
 
