@@ -1,5 +1,7 @@
 {
-    "usingComponents": {},
+    "usingComponents": {
+        "van-dialog": "@vant/weapp/dialog/index"
+    },
     "navigationBarBackgroundColor": "#1b1b25",
     "navigationBarTitleText": "发现音乐"
 }

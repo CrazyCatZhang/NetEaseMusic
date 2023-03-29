@@ -49,6 +49,13 @@ page {
     line-height: 70rpx;
 }
 
+.header .clearSearch {
+    position: absolute;
+    top: 40rpx;
+    right: 180rpx;
+    color: #28272f;
+}
+
 .iconlist {
     display: flex;
     flex-direction: row;
@@ -148,4 +155,62 @@ page {
     color: #f3f4fa;
     border-bottom: 1rpx solid #33343d;
     font-size: 30rpx;
+}
+
+.history {
+    padding: 30rpx;
+    padding-bottom: 0;
+}
+
+.history .top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history .top .title {
+    color: #f0f2f3;
+    font-weight: bold;
+    font-size: 30rpx;
+}
+
+.history .top .icon-Rrl_s_040 {
+    color: #76767e;
+}
+
+.history .bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-content: space-around;
+    margin-top: 20rpx;
+    flex-wrap: wrap;
+}
+
+.history .bottom .historyItem {
+    padding: 5rpx 20rpx;
+    background-color: #333238;
+    border-radius: 30rpx;
+    -webkit-border-radius: 30rpx;
+    -moz-border-radius: 30rpx;
+    -ms-border-radius: 30rpx;
+    -o-border-radius: 30rpx;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+    color: #d4d3da;
+    font-size: 28rpx;
+    font-weight: 350;
+}
+
+.my-custom-class {
+    background-color: #1b1b24 !important;
+}
+
+.my-custom-class .van-dialog__header {
+    color: #d4d3da;
+}
+
+.my-custom-class button {
+    background-color: #1b1b24 !important;
 }
