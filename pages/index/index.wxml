@@ -4,8 +4,8 @@
     <view class="indexHeader">
         <image src="../../static/sidebar.png" alt="sidebar" />
         <view class="search">
-            <van-icon class="search-icon" name="search" color="#7b7a8e" />
-            <input type="text" placeholder="请输入搜索内容" />
+            <van-icon class="search-icon" name="search" color="#7b7a8e" bind:tap="toSearch"/>
+            <input type="text" placeholder="请输入搜索内容"  bind:focus="toSearch"/>
             <van-icon name="scan" color="#7b7a8e" />
         </view>
         <image class="microphone" src="../../static/microphone.png" alt="microphone" />

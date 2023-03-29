@@ -5,14 +5,20 @@
             <input
                 class="searchInput"
                 type="text"
-                value="{{searchContent}}"
+                value="{{ searchContent }}"
                 placeholder="{{ defaultKeyword }}"
                 placeholder-style="color: #5b5a62;"
+                focus="{{true}}"
+                auto-focus="{{true}}"
                 bindinput="handleInput"
             />
         </view>
         <text class="singal">搜索</text>
-        <text wx:if="{{searchContent !== ''}}" class="iconfont icon-guanbishixin clearSearch" bind:tap="clearSearch"></text>
+        <text
+            wx:if="{{ searchContent !== '' }}"
+            class="iconfont icon-guanbishixin clearSearch"
+            bind:tap="clearSearch"
+        ></text>
     </view>
     <view class="iconlist">
         <view class="singer">
@@ -32,7 +38,7 @@
             <text>识曲</text>
         </view>
     </view>
-    <view wx:if="{{searchList.length > 0}}" class="showSearchContent">
+    <view wx:if="{{ searchList.length > 0 }}" class="showSearchContent">
         <view class="searchList">
             <view class="searchItem" wx:for="{{ searchList }}" wx:key="id">
                 <text class="iconfont icon-sousuo"></text>
@@ -40,18 +46,18 @@
             </view>
         </view>
     </view>
-    <view wx:if="{{historyList.length > 0}}" class="history">
+    <view wx:if="{{ historyList.length > 0 }}" class="history">
         <view class="top">
             <view class="title">搜索历史</view>
             <text class="iconfont icon-Rrl_s_040" bind:tap="clearHistory"></text>
         </view>
         <view class="bottom">
-            <view wx:for="{{historyList}}" wx:key="item" class="historyItem">
-                {{item}}
+            <view wx:for="{{ historyList }}" wx:key="item" class="historyItem">
+                {{ item }}
             </view>
         </view>
     </view>
-    <view wx:if="{{searchList.length === 0}}" class="topList">
+    <view wx:if="{{ searchList.length === 0 }}" class="topList">
         <swiper class="topListSwiper" next-margin="100rpx">
             <swiper-item>
                 <view class="swiperItem">
@@ -86,5 +92,9 @@
     </view>
 </view>
 
-
-<van-dialog id="van-dialog" custom-class="my-custom-class" confirm-button-color="#a9a9b3" cancel-button-color="#333238"/>
+<van-dialog 
+    id="van-dialog" 
+    custom-class="my-custom-class" 
+    confirm-button-color="#a9a9b3" 
+    cancel-button-color="#333238"
+/>
