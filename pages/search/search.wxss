@@ -1,0 +1,119 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20rpx;
+}
+
+.header .icon-zuosanjiao {
+    color: #f5f6fb;
+    font-size: 50rpx;
+}
+
+.header .singal {
+    color: #f5f6fb;
+    font-size: 35rpx;
+    font-weight: 400;
+}
+
+.header .search {
+    box-sizing: border-box;
+    width: 550rpx;
+    height: 70rpx;
+    background-color: #323137;
+    border-radius: 40rpx;
+    -webkit-border-radius: 40rpx;
+    -moz-border-radius: 40rpx;
+    -ms-border-radius: 40rpx;
+    -o-border-radius: 40rpx;
+    padding: 10rpx 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+}
+
+.header .search .icon-sousuo {
+    margin-right: 20rpx;
+    color: #aeacb4;
+}
+
+.header .search .searchInput {
+    width: 410rpx;
+    color: #d2cbd8;
+    line-height: 70rpx;
+}
+
+.iconlist {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.iconlist view {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    color: #c0c0ca;
+    font-size: 30rpx;
+    margin-top: 20rpx;
+}
+
+.iconlist view image {
+    width: 50rpx;
+    height: 50rpx;
+    margin-bottom: 10rpx;
+}
+
+.topList {
+    padding: 30rpx;
+    margin-top: 20rpx;
+}
+
+.topListSwiper {
+    height: 1740rpx;
+}
+
+.swiperItem {
+    width: 86%;
+    background-color: #333238;
+    border-radius: 20rpx;
+    padding: 30rpx;
+}
+
+.swiperItem .title {
+    color: #f6f5fb;
+    font-size: 40rpx;
+    line-height: 90rpx;
+    border-bottom: 1px solid #48474d;
+    margin-bottom: 25rpx;
+}
+
+.swiperItem .contentList {
+    padding-left: 10rpx;
+    margin-bottom: 30rpx;
+}
+
+.swiperItem .contentList .rank {
+    color: #adabb4;
+    font-size: 35rpx;
+    margin-right: 30rpx;
+}
+
+.swiperItem .contentList:nth-child(-n + 4) .rank {
+    color: #e75142;
+    font-weight: bold;
+}
+
+.swiperItem .contentList .name {
+    color: #f1f0f2;
+    margin-right: 10rpx;
+}
+
+.swiperItem .contentList .sign {
+    color: #e54f47;
+}

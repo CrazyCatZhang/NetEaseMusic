@@ -1,0 +1,61 @@
+<view class="searchContainer">
+    <view class="header">
+        <!-- <text class="iconfont icon-zuosanjiao"></text> -->
+        <view class="search">
+            <text class="iconfont icon-sousuo"></text>
+            <input class="searchInput" type="text" placeholder="{{defaultKeyword}}" placeholder-style="color: #5b5a62;"/>
+        </view>
+        <text class="singal">搜索</text>
+    </view>
+    <view class="iconlist">
+        <view class="singer">
+            <image src="/static/search/singer.png"></image>
+            <text>歌手</text>
+        </view>
+        <view class="genre">
+            <image src="/static/search/genre.png"></image>
+            <text>曲风</text>
+        </view> 
+        <view class="zone">
+            <image src="/static/search/zone.png"></image>
+            <text>专区</text>
+        </view>
+        <view class="voice">
+            <image src="/static/search/voice.png"></image>
+            <text>识曲</text>
+        </view>
+    </view>
+    <view class="topList">
+        <swiper class="topListSwiper" next-margin="100rpx">
+            <swiper-item>
+                <view class="swiperItem">
+                    <view class="title">{{searchList.title}}</view>
+                    <view wx:for="{{searchList.data}}" wx:key="score" class="contentList">
+                        <text class="rank">{{index + 1}}</text>
+                        <text class="name">{{item.searchWord}}</text>
+                        <text wx:if="{{item.iconType === 1}}" class="iconfont icon-remen sign"></text>
+                        <text wx:if="{{item.iconType === 5}}" class="iconfont icon-shangsheng sign"></text>
+                    </view>
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view class="swiperItem">
+                    <view class="title">{{topicList.title}}</view>
+                    <view wx:for="{{topicList.hot}}" wx:key="actId" class="contentList">
+                        <text class="rank">{{index + 1}}</text>
+                        <text class="name">{{item.title}}</text>
+                    </view>
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view class="swiperItem">
+                    <view class="title">{{popularList.title}}</view>
+                    <view wx:for="{{popularList.data.list}}" wx:key="id" class="contentList">
+                        <text class="rank">{{index + 1}}</text>
+                        <text class="name">{{item.nickName}}</text>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>
