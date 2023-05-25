@@ -1,7 +1,8 @@
 {
     "usingComponents": {
         "NavHeader": "/components/NavHeader/NavHeader",
-        "van-icon": "@vant/weapp/icon/index"
+        "van-icon": "@vant/weapp/icon/index",
+        "van-popup": "@vant/weapp/popup/index"
     },
     "navigationStyle": "custom"
 }

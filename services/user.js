@@ -87,7 +87,7 @@ async function getRecentlyPodcast() {
 }
 
 async function getRecommendSong() {
-    return await request('/recommend/songs')
+    return await request('/recommend/resource')
 }
 
 export {
